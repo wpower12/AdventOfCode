@@ -3,16 +3,16 @@
 void main(){
   FILE *fp;
   fp = fopen( "moves.txt", "r" );
-  int floor = 0;
+  int f = 0;
   int pt = 1;
   int basement = 0;
 
   char c;
   while( (c = fgetc(fp)) != EOF ){
     if( c == '(' ) {
-      floor++;
+      f++;
     } else if( c == ')' ){
-      floor--;
+      f--;
     }
 
     if( (floor < 0) && (basement == 0) ){
@@ -21,5 +21,5 @@ void main(){
     pt++;
   }
  fclose(fp);
- printf("floors: %d basementpos: %d \n",floor, basement);
+ printf("floors: %d basementpos: %d \n",f, basement);
 }
