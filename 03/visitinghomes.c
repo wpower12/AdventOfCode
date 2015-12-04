@@ -58,9 +58,9 @@ void main(){
   }
 
   int total = 1;
-  houses[0][0] = 1;
   x = 0 - x_offset;
   y = 0 - y_offset;
+  houses[x][y] = 1;
   while((c = fgetc(fp)) != EOF){
     switch( c ){
       case '>':
